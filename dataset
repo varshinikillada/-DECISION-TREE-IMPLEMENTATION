@@ -1,0 +1,26 @@
+import csv
+
+data = [
+    ['Outlook', 'Temperature', 'Humidity', 'Windy', 'PlayTennis'],
+    ['Sunny', 'Hot', 'High', False, 'No'],
+    ['Sunny', 'Hot', 'High', True, 'Yes'],
+    ['Overcast', 'Hot', 'High', False, 'Yes'],
+    ['Rainy', 'Mild', 'High', False, 'Yes'],
+    ['Rainy', 'Cool', 'Normal', False, 'Yes'],
+    ['Rainy', 'Cool', 'Normal', True, 'No'],
+    ['Overcast', 'Cool', 'Normal', True, 'Yes'],
+    ['Sunny', 'Mild', 'High', False, 'No'],
+    ['Sunny', 'Cool', 'Normal', True, 'Yes'],
+    ['Rainy', 'Mild', 'Normal', False, 'Yes'],
+    ['Sunny', 'Mild', 'Normal', True, 'Yes'],
+    ['Overcast', 'Mild', 'High', True, 'Yes'],
+    ['Overcast', 'Hot', 'Normal', False, 'Yes'],
+    ['Rainy', 'Mild', 'High', True, 'No']
+]
+
+file_name = 'tennisdata.csv'
+with open(file_name, mode='w', newline='') as file:
+    writer = csv.writer(file)
+    writer.writerows(data)
+
+print(f"CSV file '{file_name}' created successfully!")
